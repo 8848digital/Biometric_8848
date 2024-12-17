@@ -259,8 +259,8 @@ app_license = "mit"
 # }
 
 
-scheduler_events = {
-    "cron": {
-        "*/10 * * * *": ["biometric.biometric.doctype.attendance_biometric.attendance_biometric.validate"]
-    }
-}
+# scheduler_events = {
+#     "cron": {
+#         "*/10 * * * *": ["biometric.biometric.doctype.attendance_biometric.attendance_biometric.validate"]
+#     }
+# }
