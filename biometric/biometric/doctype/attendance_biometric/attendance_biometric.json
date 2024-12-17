@@ -1,0 +1,464 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HR-EMP-{employeecode}",
+ "creation": "2024-12-13 17:36:53.879683",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employeename",
+  "employeecode",
+  "stringcode",
+  "numericcode",
+  "gender",
+  "companyid",
+  "departmentid",
+  "designation",
+  "categoryid",
+  "doj",
+  "dor",
+  "doc",
+  "employeecodeindevice",
+  "employeerfidnumber",
+  "employementtype",
+  "status",
+  "employeedevicepassword",
+  "employeedevicegroup",
+  "fathername",
+  "mothername",
+  "residentialaddress",
+  "permanentaddress",
+  "contactno",
+  "email",
+  "dob",
+  "placeofbirth",
+  "nomenee1",
+  "nomenee2",
+  "remarks",
+  "recordstatus",
+  "c1",
+  "c2",
+  "c3",
+  "c4",
+  "c5",
+  "c6",
+  "c7",
+  "location",
+  "bloodgroup",
+  "workplace",
+  "extensionno",
+  "loginname",
+  "loginpassword",
+  "grade",
+  "team",
+  "isrecievenotification",
+  "holidaygroup",
+  "shiftgroupid",
+  "shiftrosterid",
+  "lastmodifiedby",
+  "aadhaarnumber",
+  "employeephoto",
+  "masterdeviceid",
+  "biophoto1",
+  "biophotopic",
+  "deviceexpiryrule",
+  "deviceexpirystartdate",
+  "deviceexpiryenddate",
+  "deviceid",
+  "enrolleddate",
+  "migratetoothercryptography",
+  "geofenceid",
+  "maritalstatus",
+  "nationality",
+  "passportnumber",
+  "overallexperience",
+  "qualifications",
+  "referencedetail",
+  "emergencycontact",
+  "subdepartment",
+  "division"
+ ],
+ "fields": [
+  {
+   "fieldname": "employeename",
+   "fieldtype": "Data",
+   "label": "EmployeeName"
+  },
+  {
+   "fieldname": "employeecode",
+   "fieldtype": "Data",
+   "label": "EmployeeCode"
+  },
+  {
+   "fieldname": "stringcode",
+   "fieldtype": "Data",
+   "label": "StringCode"
+  },
+  {
+   "fieldname": "numericcode",
+   "fieldtype": "Data",
+   "label": "NumericCode"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "companyid",
+   "fieldtype": "Link",
+   "label": "CompanyId",
+   "options": "Company"
+  },
+  {
+   "fieldname": "departmentid",
+   "fieldtype": "Data",
+   "label": "DepartmentId"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "categoryid",
+   "fieldtype": "Data",
+   "label": "CategoryId"
+  },
+  {
+   "fieldname": "doj",
+   "fieldtype": "Data",
+   "label": "DOJ"
+  },
+  {
+   "fieldname": "dor",
+   "fieldtype": "Data",
+   "label": "DOR"
+  },
+  {
+   "fieldname": "doc",
+   "fieldtype": "Data",
+   "label": "DOC"
+  },
+  {
+   "fieldname": "employeecodeindevice",
+   "fieldtype": "Data",
+   "label": "EmployeeCodeInDevice"
+  },
+  {
+   "fieldname": "employeerfidnumber",
+   "fieldtype": "Data",
+   "label": "EmployeeRFIDNumber"
+  },
+  {
+   "fieldname": "employementtype",
+   "fieldtype": "Data",
+   "label": "EmployementType"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "employeedevicepassword",
+   "fieldtype": "Data",
+   "label": "EmployeeDevicePassword"
+  },
+  {
+   "fieldname": "employeedevicegroup",
+   "fieldtype": "Data",
+   "label": "EmployeeDeviceGroup"
+  },
+  {
+   "fieldname": "fathername",
+   "fieldtype": "Data",
+   "label": "FatherName"
+  },
+  {
+   "fieldname": "mothername",
+   "fieldtype": "Data",
+   "label": "MotherName"
+  },
+  {
+   "fieldname": "residentialaddress",
+   "fieldtype": "Data",
+   "label": "ResidentialAddress"
+  },
+  {
+   "fieldname": "permanentaddress",
+   "fieldtype": "Data",
+   "label": "PermanentAddress"
+  },
+  {
+   "fieldname": "contactno",
+   "fieldtype": "Data",
+   "label": "ContactNo"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "placeofbirth",
+   "fieldtype": "Data",
+   "label": "PlaceOfBirth"
+  },
+  {
+   "fieldname": "nomenee1",
+   "fieldtype": "Data",
+   "label": "Nomenee1"
+  },
+  {
+   "fieldname": "nomenee2",
+   "fieldtype": "Data",
+   "label": "Nomenee2"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "recordstatus",
+   "fieldtype": "Data",
+   "label": "RecordStatus"
+  },
+  {
+   "fieldname": "c1",
+   "fieldtype": "Data",
+   "label": "C1"
+  },
+  {
+   "fieldname": "c2",
+   "fieldtype": "Data",
+   "label": "C2"
+  },
+  {
+   "fieldname": "c3",
+   "fieldtype": "Data",
+   "label": "C3"
+  },
+  {
+   "fieldname": "c4",
+   "fieldtype": "Data",
+   "label": "C4"
+  },
+  {
+   "fieldname": "c5",
+   "fieldtype": "Data",
+   "label": "C5"
+  },
+  {
+   "fieldname": "c6",
+   "fieldtype": "Data",
+   "label": "C6"
+  },
+  {
+   "fieldname": "c7",
+   "fieldtype": "Data",
+   "label": "C7"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "bloodgroup",
+   "fieldtype": "Data",
+   "label": "BLOODGROUP"
+  },
+  {
+   "fieldname": "workplace",
+   "fieldtype": "Data",
+   "label": "WorkPlace"
+  },
+  {
+   "fieldname": "extensionno",
+   "fieldtype": "Data",
+   "label": "ExtensionNo"
+  },
+  {
+   "fieldname": "loginname",
+   "fieldtype": "Data",
+   "label": "LoginName"
+  },
+  {
+   "fieldname": "loginpassword",
+   "fieldtype": "Data",
+   "label": "LoginPassword"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "label": "Grade"
+  },
+  {
+   "fieldname": "team",
+   "fieldtype": "Data",
+   "label": "Team"
+  },
+  {
+   "fieldname": "isrecievenotification",
+   "fieldtype": "Data",
+   "label": "IsRecieveNotification"
+  },
+  {
+   "fieldname": "holidaygroup",
+   "fieldtype": "Data",
+   "label": "HolidayGroup"
+  },
+  {
+   "fieldname": "shiftgroupid",
+   "fieldtype": "Data",
+   "label": "ShiftGroupId"
+  },
+  {
+   "fieldname": "shiftrosterid",
+   "fieldtype": "Data",
+   "label": "ShiftRosterId"
+  },
+  {
+   "fieldname": "lastmodifiedby",
+   "fieldtype": "Data",
+   "label": "LastModifiedBy"
+  },
+  {
+   "fieldname": "aadhaarnumber",
+   "fieldtype": "Data",
+   "label": "AadhaarNumber"
+  },
+  {
+   "fieldname": "employeephoto",
+   "fieldtype": "Data",
+   "label": "EmployeePhoto"
+  },
+  {
+   "fieldname": "masterdeviceid",
+   "fieldtype": "Data",
+   "label": "MasterDeviceId"
+  },
+  {
+   "fieldname": "biophoto1",
+   "fieldtype": "Data",
+   "label": "BIOPhoto1"
+  },
+  {
+   "fieldname": "biophotopic",
+   "fieldtype": "Data",
+   "label": "BIOPhotoPic"
+  },
+  {
+   "fieldname": "deviceexpiryrule",
+   "fieldtype": "Data",
+   "label": "DeviceExpiryRule"
+  },
+  {
+   "fieldname": "deviceexpirystartdate",
+   "fieldtype": "Data",
+   "label": "DeviceExpiryStartDate"
+  },
+  {
+   "fieldname": "deviceexpiryenddate",
+   "fieldtype": "Data",
+   "label": "DeviceExpiryEndDate"
+  },
+  {
+   "fieldname": "deviceid",
+   "fieldtype": "Data",
+   "label": "DeviceId"
+  },
+  {
+   "fieldname": "enrolleddate",
+   "fieldtype": "Data",
+   "label": "EnrolledDate"
+  },
+  {
+   "fieldname": "migratetoothercryptography",
+   "fieldtype": "Data",
+   "label": "MigrateToOtherCryptography"
+  },
+  {
+   "fieldname": "geofenceid",
+   "fieldtype": "Data",
+   "label": "GeofenceId"
+  },
+  {
+   "fieldname": "maritalstatus",
+   "fieldtype": "Data",
+   "label": "MaritalStatus"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "passportnumber",
+   "fieldtype": "Data",
+   "label": "PassportNumber"
+  },
+  {
+   "fieldname": "overallexperience",
+   "fieldtype": "Data",
+   "label": "OverallExperience"
+  },
+  {
+   "fieldname": "qualifications",
+   "fieldtype": "Data",
+   "label": "Qualifications"
+  },
+  {
+   "fieldname": "referencedetail",
+   "fieldtype": "Data",
+   "label": "ReferenceDetail"
+  },
+  {
+   "fieldname": "emergencycontact",
+   "fieldtype": "Data",
+   "label": "EmergencyContact"
+  },
+  {
+   "fieldname": "subdepartment",
+   "fieldtype": "Data",
+   "label": "SubDepartment"
+  },
+  {
+   "fieldname": "division",
+   "fieldtype": "Data",
+   "label": "Division"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-16 11:02:34.453050",
+ "modified_by": "Administrator",
+ "module": "Biometric",
+ "name": "Attendance Biometric",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

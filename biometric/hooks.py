@@ -144,6 +144,22 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+# Explicitly import the method for testing purposes
+
+# scheduler_events = {
+#     "cron": {
+#         "*/10 * * * *": ["biometric.biometric.doctype.attendance_biometric.attendance_biometric.create_employee_checkin"]
+#     }
+# }
+# /home/ascra/Documents/biomatric-8848/frappe-bench/apps/biometric/biometric/biometric/doctype/attendance_biometric/attendance_biometric.py
+
+# frappe-bench/apps/biometric/biometric/biometric/doctype/attendance_biometric/attendance_biometric.py
+# frappe-bench/apps/biometric/biometric/biometric/doctype/attendance_biometric/attendance_biometric.py
+
+# /home/ascra/Documents/biomatric-8848/frappe-bench/apps/biometric/biometric/biometric/api/essl/fetch_attendance.py
+
+
+# frappe-bench/apps/biometric/biometric/biometric/api/essl/fetch_attendance.py
 
 # Scheduled Tasks
 # ---------------
@@ -242,3 +258,9 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+scheduler_events = {
+    "cron": {
+        "*/10 * * * *": ["biometric.biometric.doctype.attendance_biometric.attendance_biometric.validate"]
+    }
+}

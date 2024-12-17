@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-16 19:03:52.948142",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_checkin",
+  "attendance",
+  "attendance_request"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "employee_checkin",
+   "fieldtype": "Check",
+   "label": "Employee Checkin"
+  },
+  {
+   "default": "0",
+   "fieldname": "attendance",
+   "fieldtype": "Check",
+   "label": "Attendance"
+  },
+  {
+   "default": "0",
+   "fieldname": "attendance_request",
+   "fieldtype": "Check",
+   "label": "Attendance Request"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-12-16 19:03:52.948142",
+ "modified_by": "Administrator",
+ "module": "Biometric",
+ "name": "Biometric Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
