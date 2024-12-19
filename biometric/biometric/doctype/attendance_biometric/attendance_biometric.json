@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:HR-EMP-{attendancelogid}-{####}",
  "creation": "2024-12-13 17:36:53.879683",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -489,11 +488,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-19 15:25:06.141848",
+ "modified": "2024-12-19 15:56:18.652773",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Attendance Biometric",
- "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
