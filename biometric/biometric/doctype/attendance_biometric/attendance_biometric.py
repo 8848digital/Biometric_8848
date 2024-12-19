@@ -1,7 +1,7 @@
 import frappe
 from frappe.model.document import Document
 from frappe.utils import now_datetime
-# Attendance Biometric
+
 class AttendanceBiometric(Document):
     def after_insert(self):
         settings = frappe.get_single("Biometric Settings")
@@ -9,7 +9,7 @@ class AttendanceBiometric(Document):
         if settings.employee_checkin:
             frappe.get_doc({
                 "doctype": "Employee Checkin",
-                "employee": self.employeeid, 
+                "employee": self.attendancelogid, 
                 "time": now_datetime(),
                 "log_type": "IN",
                 "attendance_biometric": self.name
@@ -18,7 +18,7 @@ class AttendanceBiometric(Document):
         if settings.attendance:
             frappe.get_doc({
                 "doctype": "Attendance",
-                "employee": self.employeeid,
+                "employee": self.attendancelogid,
                 "attendance_date": now_datetime().date(),
                 "status": "Present",  
                 "attendance_biometric": self.name
@@ -27,7 +27,7 @@ class AttendanceBiometric(Document):
         if settings.attendance_request:
             frappe.get_doc({
                 "doctype": "Attendance Request",
-                "employee": self.employeeid,
+                "employee": self.attendancelogid,
                 "from_date": now_datetime().date(),
                 "to_date": now_datetime().date(),
                 "reason": "Auto-created by Attendance Biometric",
