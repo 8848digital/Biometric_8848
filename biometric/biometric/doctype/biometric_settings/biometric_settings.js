@@ -6,3 +6,19 @@
 
 // 	},
 // });
+
+
+frappe.ui.form.on("Biometric Settings", {
+    refresh(frm) {
+        frm.add_custom_button(__('Manually Fetch Attendance'), function() {
+            frappe.call({
+                method: 'biometric.biometric.api.essl.fetch_attendance.get_attendance_logs',
+                callback: function(r) {
+                    if (!r.exc) {
+                        frappe.msgprint(__('Attendance logs fetched successfully.'));
+                    }
+                }
+            });
+        });
+    },
+});
