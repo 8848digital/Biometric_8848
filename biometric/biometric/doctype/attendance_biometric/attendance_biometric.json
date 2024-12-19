@@ -1,41 +1,44 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:HR-EMP-{employeecode}",
+ "autoname": "format:HR-EMP-{employeeid}",
  "creation": "2024-12-13 17:36:53.879683",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "employeename",
-  "employeecode",
-  "stringcode",
-  "numericcode",
-  "gender",
-  "companyid",
-  "departmentid",
-  "designation",
-  "categoryid",
-  "doj",
-  "dor",
-  "doc",
-  "employeecodeindevice",
-  "employeerfidnumber",
-  "employementtype",
+  "attendancelogid",
+  "attendancedate",
+  "employeeid",
+  "intime",
+  "indeviceid",
+  "outtime",
+  "outdeviceid",
+  "duration",
+  "lateby",
+  "earlyby",
+  "isonleave",
+  "leavetype",
+  "leaveduration",
+  "weeklyoff",
+  "holiday",
+  "leaveremarks",
+  "shiftid",
+  "present",
+  "absent",
   "status",
-  "employeedevicepassword",
-  "employeedevicegroup",
-  "fathername",
-  "mothername",
-  "residentialaddress",
-  "permanentaddress",
-  "contactno",
-  "email",
-  "dob",
-  "placeofbirth",
-  "nomenee1",
-  "nomenee2",
+  "statuscode",
+  "p1status",
+  "p2status",
+  "p3status",
+  "isonspecialoff",
+  "specialofftype",
+  "specialoffremark",
+  "specialoffduration",
+  "overtime",
+  "overtimee",
+  "missedoutpunch",
   "remarks",
-  "recordstatus",
+  "missedinpunch",
   "c1",
   "c2",
   "c3",
@@ -43,192 +46,20 @@
   "c5",
   "c6",
   "c7",
-  "location",
-  "bloodgroup",
-  "workplace",
-  "extensionno",
-  "loginname",
-  "loginpassword",
-  "grade",
-  "team",
-  "isrecievenotification",
-  "holidaygroup",
-  "shiftgroupid",
-  "shiftrosterid",
-  "lastmodifiedby",
-  "aadhaarnumber",
-  "employeephoto",
-  "masterdeviceid",
-  "biophoto1",
-  "biophotopic",
-  "deviceexpiryrule",
-  "deviceexpirystartdate",
-  "deviceexpiryenddate",
-  "deviceid",
-  "enrolleddate",
-  "migratetoothercryptography",
-  "geofenceid",
-  "maritalstatus",
-  "nationality",
-  "passportnumber",
-  "overallexperience",
-  "qualifications",
-  "referencedetail",
-  "emergencycontact",
-  "subdepartment",
-  "division"
+  "leavetypeid",
+  "lossofhours",
+  "punchrecords"
  ],
  "fields": [
-  {
-   "fieldname": "employeename",
-   "fieldtype": "Data",
-   "label": "EmployeeName"
-  },
-  {
-   "fieldname": "employeecode",
-   "fieldtype": "Data",
-   "label": "EmployeeCode"
-  },
-  {
-   "fieldname": "stringcode",
-   "fieldtype": "Data",
-   "label": "StringCode"
-  },
-  {
-   "fieldname": "numericcode",
-   "fieldtype": "Data",
-   "label": "NumericCode"
-  },
-  {
-   "fieldname": "gender",
-   "fieldtype": "Data",
-   "label": "Gender"
-  },
-  {
-   "fieldname": "companyid",
-   "fieldtype": "Link",
-   "label": "CompanyId",
-   "options": "Company"
-  },
-  {
-   "fieldname": "departmentid",
-   "fieldtype": "Data",
-   "label": "DepartmentId"
-  },
-  {
-   "fieldname": "designation",
-   "fieldtype": "Data",
-   "label": "Designation"
-  },
-  {
-   "fieldname": "categoryid",
-   "fieldtype": "Data",
-   "label": "CategoryId"
-  },
-  {
-   "fieldname": "doj",
-   "fieldtype": "Data",
-   "label": "DOJ"
-  },
-  {
-   "fieldname": "dor",
-   "fieldtype": "Data",
-   "label": "DOR"
-  },
-  {
-   "fieldname": "doc",
-   "fieldtype": "Data",
-   "label": "DOC"
-  },
-  {
-   "fieldname": "employeecodeindevice",
-   "fieldtype": "Data",
-   "label": "EmployeeCodeInDevice"
-  },
-  {
-   "fieldname": "employeerfidnumber",
-   "fieldtype": "Data",
-   "label": "EmployeeRFIDNumber"
-  },
-  {
-   "fieldname": "employementtype",
-   "fieldtype": "Data",
-   "label": "EmployementType"
-  },
   {
    "fieldname": "status",
    "fieldtype": "Data",
    "label": "Status"
   },
   {
-   "fieldname": "employeedevicepassword",
-   "fieldtype": "Data",
-   "label": "EmployeeDevicePassword"
-  },
-  {
-   "fieldname": "employeedevicegroup",
-   "fieldtype": "Data",
-   "label": "EmployeeDeviceGroup"
-  },
-  {
-   "fieldname": "fathername",
-   "fieldtype": "Data",
-   "label": "FatherName"
-  },
-  {
-   "fieldname": "mothername",
-   "fieldtype": "Data",
-   "label": "MotherName"
-  },
-  {
-   "fieldname": "residentialaddress",
-   "fieldtype": "Data",
-   "label": "ResidentialAddress"
-  },
-  {
-   "fieldname": "permanentaddress",
-   "fieldtype": "Data",
-   "label": "PermanentAddress"
-  },
-  {
-   "fieldname": "contactno",
-   "fieldtype": "Data",
-   "label": "ContactNo"
-  },
-  {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email"
-  },
-  {
-   "fieldname": "dob",
-   "fieldtype": "Data",
-   "label": "DOB"
-  },
-  {
-   "fieldname": "placeofbirth",
-   "fieldtype": "Data",
-   "label": "PlaceOfBirth"
-  },
-  {
-   "fieldname": "nomenee1",
-   "fieldtype": "Data",
-   "label": "Nomenee1"
-  },
-  {
-   "fieldname": "nomenee2",
-   "fieldtype": "Data",
-   "label": "Nomenee2"
-  },
-  {
    "fieldname": "remarks",
    "fieldtype": "Data",
    "label": "Remarks"
-  },
-  {
-   "fieldname": "recordstatus",
-   "fieldtype": "Data",
-   "label": "RecordStatus"
   },
   {
    "fieldname": "c1",
@@ -266,179 +97,179 @@
    "label": "C7"
   },
   {
-   "fieldname": "location",
+   "fieldname": "attendancelogid",
    "fieldtype": "Data",
-   "label": "Location"
+   "label": "AttendanceLogId"
   },
   {
-   "fieldname": "bloodgroup",
+   "fieldname": "attendancedate",
    "fieldtype": "Data",
-   "label": "BLOODGROUP"
+   "label": "AttendanceDate"
   },
   {
-   "fieldname": "workplace",
+   "fieldname": "employeeid",
    "fieldtype": "Data",
-   "label": "WorkPlace"
+   "label": "EmployeeId"
   },
   {
-   "fieldname": "extensionno",
+   "fieldname": "intime",
    "fieldtype": "Data",
-   "label": "ExtensionNo"
+   "label": "InTime"
   },
   {
-   "fieldname": "loginname",
+   "fieldname": "indeviceid",
    "fieldtype": "Data",
-   "label": "LoginName"
+   "label": "InDeviceId"
   },
   {
-   "fieldname": "loginpassword",
+   "fieldname": "outtime",
    "fieldtype": "Data",
-   "label": "LoginPassword"
+   "label": "OutTime"
   },
   {
-   "fieldname": "grade",
+   "fieldname": "outdeviceid",
    "fieldtype": "Data",
-   "label": "Grade"
+   "label": "OutDeviceId"
   },
   {
-   "fieldname": "team",
+   "fieldname": "duration",
    "fieldtype": "Data",
-   "label": "Team"
+   "label": "Duration"
   },
   {
-   "fieldname": "isrecievenotification",
+   "fieldname": "lateby",
    "fieldtype": "Data",
-   "label": "IsRecieveNotification"
+   "label": "LateBy"
   },
   {
-   "fieldname": "holidaygroup",
+   "fieldname": "earlyby",
    "fieldtype": "Data",
-   "label": "HolidayGroup"
+   "label": "EarlyBy"
   },
   {
-   "fieldname": "shiftgroupid",
+   "fieldname": "isonleave",
    "fieldtype": "Data",
-   "label": "ShiftGroupId"
+   "label": "IsOnLeave"
   },
   {
-   "fieldname": "shiftrosterid",
+   "fieldname": "leavetype",
    "fieldtype": "Data",
-   "label": "ShiftRosterId"
+   "label": "LeaveType"
   },
   {
-   "fieldname": "lastmodifiedby",
+   "fieldname": "leaveduration",
    "fieldtype": "Data",
-   "label": "LastModifiedBy"
+   "label": "LeaveDuration"
   },
   {
-   "fieldname": "aadhaarnumber",
+   "fieldname": "weeklyoff",
    "fieldtype": "Data",
-   "label": "AadhaarNumber"
+   "label": "WeeklyOff"
   },
   {
-   "fieldname": "employeephoto",
+   "fieldname": "holiday",
    "fieldtype": "Data",
-   "label": "EmployeePhoto"
+   "label": "Holiday"
   },
   {
-   "fieldname": "masterdeviceid",
+   "fieldname": "leaveremarks",
    "fieldtype": "Data",
-   "label": "MasterDeviceId"
+   "label": "LeaveRemarks"
   },
   {
-   "fieldname": "biophoto1",
+   "fieldname": "shiftid",
    "fieldtype": "Data",
-   "label": "BIOPhoto1"
+   "label": "ShiftId"
   },
   {
-   "fieldname": "biophotopic",
+   "fieldname": "present",
    "fieldtype": "Data",
-   "label": "BIOPhotoPic"
+   "label": "Present"
   },
   {
-   "fieldname": "deviceexpiryrule",
+   "fieldname": "absent",
    "fieldtype": "Data",
-   "label": "DeviceExpiryRule"
+   "label": "Absent"
   },
   {
-   "fieldname": "deviceexpirystartdate",
+   "fieldname": "statuscode",
    "fieldtype": "Data",
-   "label": "DeviceExpiryStartDate"
+   "label": "StatusCode"
   },
   {
-   "fieldname": "deviceexpiryenddate",
+   "fieldname": "p1status",
    "fieldtype": "Data",
-   "label": "DeviceExpiryEndDate"
+   "label": "P1Status"
   },
   {
-   "fieldname": "deviceid",
+   "fieldname": "p2status",
    "fieldtype": "Data",
-   "label": "DeviceId"
+   "label": "P2Status"
   },
   {
-   "fieldname": "enrolleddate",
+   "fieldname": "p3status",
    "fieldtype": "Data",
-   "label": "EnrolledDate"
+   "label": "P3Status"
   },
   {
-   "fieldname": "migratetoothercryptography",
+   "fieldname": "isonspecialoff",
    "fieldtype": "Data",
-   "label": "MigrateToOtherCryptography"
+   "label": "IsonSpecialOff"
   },
   {
-   "fieldname": "geofenceid",
+   "fieldname": "specialofftype",
    "fieldtype": "Data",
-   "label": "GeofenceId"
+   "label": "SpecialOffType"
   },
   {
-   "fieldname": "maritalstatus",
+   "fieldname": "specialoffremark",
    "fieldtype": "Data",
-   "label": "MaritalStatus"
+   "label": "SpecialOffRemark"
   },
   {
-   "fieldname": "nationality",
+   "fieldname": "specialoffduration",
    "fieldtype": "Data",
-   "label": "Nationality"
+   "label": "SpecialOffDuration"
   },
   {
-   "fieldname": "passportnumber",
+   "fieldname": "overtime",
    "fieldtype": "Data",
-   "label": "PassportNumber"
+   "label": "OverTime"
   },
   {
-   "fieldname": "overallexperience",
+   "fieldname": "overtimee",
    "fieldtype": "Data",
-   "label": "OverallExperience"
+   "label": "OverTimeE"
   },
   {
-   "fieldname": "qualifications",
+   "fieldname": "missedoutpunch",
    "fieldtype": "Data",
-   "label": "Qualifications"
+   "label": "MissedOutPunch"
   },
   {
-   "fieldname": "referencedetail",
+   "fieldname": "missedinpunch",
    "fieldtype": "Data",
-   "label": "ReferenceDetail"
+   "label": "MissedInPunch"
   },
   {
-   "fieldname": "emergencycontact",
+   "fieldname": "leavetypeid",
    "fieldtype": "Data",
-   "label": "EmergencyContact"
+   "label": "LeaveTypeId"
   },
   {
-   "fieldname": "subdepartment",
+   "fieldname": "lossofhours",
    "fieldtype": "Data",
-   "label": "SubDepartment"
+   "label": "LossOfHours"
   },
   {
-   "fieldname": "division",
+   "fieldname": "punchrecords",
    "fieldtype": "Data",
-   "label": "Division"
+   "label": "PunchRecords"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-16 11:02:34.453050",
+ "modified": "2024-12-19 11:46:37.362124",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Attendance Biometric",
