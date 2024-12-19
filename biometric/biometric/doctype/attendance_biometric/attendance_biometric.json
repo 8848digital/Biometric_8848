@@ -1,54 +1,98 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:HR-EMP-{employeeid}",
+ "autoname": "format:HR-EMP-{attendancelogid}-{####}",
  "creation": "2024-12-13 17:36:53.879683",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "attendancelogid",
-  "attendancedate",
+  "column_break_cid6",
   "employeeid",
-  "intime",
+  "section_break_yej8",
+  "column_break_c83u",
   "indeviceid",
-  "outtime",
+  "column_break_fdz9",
   "outdeviceid",
+  "section_break_09jj",
+  "attendancedate",
+  "column_break_tytu",
   "duration",
-  "lateby",
+  "section_break_pxdm",
+  "intime",
+  "column_break_jgz7",
+  "outtime",
+  "section_break_no0o",
+  "column_break_fdxe",
   "earlyby",
-  "isonleave",
+  "column_break_bqsh",
+  "lateby",
+  "section_break_p5wq",
   "leavetype",
+  "column_break_kfmz",
+  "isonleave",
+  "section_break_ntsh",
   "leaveduration",
-  "weeklyoff",
-  "holiday",
+  "column_break_zpu6",
   "leaveremarks",
+  "section_break_mkpd",
+  "weeklyoff",
+  "column_break_yo44",
+  "holiday",
+  "section_break_uwjk",
   "shiftid",
+  "column_break_mjbi",
+  "punchrecords",
+  "section_break_zbr5",
   "present",
+  "column_break_762t",
   "absent",
+  "section_break_i17f",
   "status",
+  "column_break_g54x",
   "statuscode",
+  "column_break_yuku",
   "p1status",
+  "column_break_r6yx",
   "p2status",
+  "column_break_cu95",
   "p3status",
+  "section_break_hmkc",
   "isonspecialoff",
+  "column_break_iema",
   "specialofftype",
+  "section_break_7mhf",
   "specialoffremark",
+  "section_break_ns6j",
   "specialoffduration",
+  "column_break_t5uu",
   "overtime",
+  "column_break_szgm",
   "overtimee",
-  "missedoutpunch",
-  "remarks",
+  "section_break_ltcu",
   "missedinpunch",
+  "column_break_yguu",
+  "missedoutpunch",
+  "section_break_ixri",
   "c1",
+  "column_break_bwtw",
   "c2",
+  "section_break_b8kb",
   "c3",
+  "section_break_ctdq",
   "c4",
+  "column_break_kkj0",
   "c5",
+  "column_break_axfl",
   "c6",
+  "section_break_elpy",
   "c7",
+  "section_break_llmm",
   "leavetypeid",
+  "column_break_8jxt",
   "lossofhours",
-  "punchrecords"
+  "column_break_cbio",
+  "remarks"
  ],
  "fields": [
   {
@@ -265,11 +309,187 @@
    "fieldname": "punchrecords",
    "fieldtype": "Data",
    "label": "PunchRecords"
+  },
+  {
+   "fieldname": "column_break_cid6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_09jj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_c83u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jgz7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_no0o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fdxe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bqsh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_p5wq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_kfmz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ntsh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_yo44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_uwjk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mjbi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_762t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_i17f",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_g54x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yuku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_r6yx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cu95",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hmkc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_iema",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ns6j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_t5uu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_szgm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ltcu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_yguu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_axfl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ixri",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bwtw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ctdq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kkj0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_elpy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_cbio",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8jxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fdz9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_yej8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_pxdm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_tytu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zpu6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mkpd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_b8kb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_zbr5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_7mhf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_llmm",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-19 11:46:37.362124",
+ "modified": "2024-12-19 15:25:06.141848",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Attendance Biometric",
