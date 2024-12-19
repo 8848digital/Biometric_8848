@@ -6,10 +6,6 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "api_key",
-  "column_break_h42x",
-  "api_secret",
-  "section_break_yjx9",
   "employee_checkin",
   "attendance",
   "attendance_request"
@@ -32,30 +28,12 @@
    "fieldname": "attendance_request",
    "fieldtype": "Check",
    "label": "Attendance Request"
-  },
-  {
-   "fieldname": "api_key",
-   "fieldtype": "Data",
-   "label": "API Key"
-  },
-  {
-   "fieldname": "api_secret",
-   "fieldtype": "Data",
-   "label": "API Secret"
-  },
-  {
-   "fieldname": "section_break_yjx9",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_h42x",
-   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-12-19 10:34:43.992554",
+ "modified": "2024-12-19 16:28:32.120670",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Biometric Settings",
