@@ -2,8 +2,9 @@ import frappe
 import requests
 import xml.etree.ElementTree as ET
 from datetime import datetime
-@frappe.whitelist(allow_guest =True)
-def get_attendance_logs():
+
+@frappe.whitelist(allow_guest=True)
+def get_attendance_logs(from_date=None, to_date=None):
     essl_settings = frappe.get_doc('ESSL Settings')
     base_url = essl_settings.ip
     username = essl_settings.username
@@ -12,21 +13,26 @@ def get_attendance_logs():
         device['serial_no']
         for device in frappe.get_all('ESSL Settings Detail', {'is_active': 1}, ['serial_no'])
     ]
-    last_checkin = frappe.db.get_all(
-        'Employee Checkin', fields=['time'], order_by='time desc', limit=1
-    )
-    from_date = (
-        last_checkin[0]['time'].strftime("%Y-%m-%dT%H:%M:%S")
-        if last_checkin
-        else datetime.now().strftime("%Y-%m-%dT00:00:00")
-    )
-    to_date = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+
+    # Default values for from_date and to_date if not provided
+    if not from_date:
+        last_checkin = frappe.db.get_all(
+            'Employee Checkin', fields=['time'], order_by='time desc', limit=1
+        )
+        from_date = (
+            last_checkin[0]['time'].strftime("%Y-%m-%dT%H:%M:%S")
+            if last_checkin else datetime.now().strftime("%Y-%m-%dT00:00:00")
+        )
+    if not to_date:
+        to_date = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+
     url = f"{base_url}/iclock/WebAPIService.asmx?op=GetTransactionsLog"
     headers = {
         "Content-Type": "text/xml; charset=utf-8",
         "SOAPAction": "http://tempuri.org/GetTransactionsLog"
     }
     device_name = "201 MAIN"
+
     for serial_number in devices:
         body = f"""<?xml version="1.0" encoding="utf-8"?>
         <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -51,6 +57,7 @@ def get_attendance_logs():
         except requests.exceptions.RequestException as e:
             frappe.log_error(message=f"Error fetching data from device {serial_number}: {e}", title="ESSL API Error")
             continue
+
         try:
             root = ET.fromstring(response.text)
             namespaces = {
@@ -79,5 +86,5 @@ def get_attendance_logs():
         except Exception as e:
             frappe.log_error(message=f"Error processing response from device {serial_number}: {e}", title="ESSL Parsing Error")
             continue
+
     return "Attendance logs fetched successfully."
-get_attendance_logs()
