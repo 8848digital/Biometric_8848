@@ -8,7 +8,9 @@
  "field_order": [
   "employee_checkin",
   "attendance",
-  "attendance_request"
+  "attendance_request",
+  "from_date",
+  "to_date"
  ],
  "fields": [
   {
@@ -28,12 +30,22 @@
    "fieldname": "attendance_request",
    "fieldtype": "Check",
    "label": "Attendance Request"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-12-19 16:28:32.120670",
+ "modified": "2024-12-20 12:09:34.735981",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Biometric Settings",

@@ -5,6 +5,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "employee_name",
+  "section_break_a2jn",
   "attendancelogid",
   "column_break_cid6",
   "employeeid",
@@ -91,7 +93,8 @@
   "column_break_8jxt",
   "lossofhours",
   "column_break_cbio",
-  "remarks"
+  "remarks",
+  "employee"
  ],
  "fields": [
   {
@@ -484,11 +487,28 @@
   {
    "fieldname": "section_break_llmm",
    "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "employee.attendance_device_id",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "section_break_a2jn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-19 15:56:18.652773",
+ "modified": "2024-12-20 11:30:53.593490",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Attendance Biometric",
