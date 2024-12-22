@@ -76,15 +76,25 @@ def get_attendance_logs(from_date=None, to_date=None):
                         employee_time = fields[1]
                         emp_id = frappe.db.get_value('Employee', {'attendance_device_id': employee_id}, 'employee')
                         if emp_id:
-                            employee_checkin = frappe.get_doc({
-                                'doctype': 'Attendance Biometric',
-                                'employeeid': emp_id,
-                                'intime': employee_time
-                            })
-                            employee_checkin.insert(ignore_permissions=True)
-                            frappe.db.commit()
+                            # Insert records into the respective DocTypes
+                            insert_attendance_record('Attendance Biometric', emp_id, employee_time)
+                            insert_attendance_record('Attendance Biometrics', emp_id, employee_time)
         except Exception as e:
             frappe.log_error(message=f"Error processing response from device {serial_number}: {e}", title="ESSL Parsing Error")
             continue
 
     return "Attendance logs fetched successfully."
+
+
+def insert_attendance_record(doctype_name, emp_id, employee_time):
+    """Insert attendance record into the specified DocType."""
+    try:
+        employee_checkin = frappe.get_doc({
+            'doctype': doctype_name,
+            'employeeid': emp_id,
+            'intime': employee_time
+        })
+        employee_checkin.insert(ignore_permissions=True)
+        frappe.db.commit()
+    except Exception as e:
+        frappe.log_error(message=f"Error inserting record for {doctype_name} with employee {emp_id}: {e}", title="Attendance Insert Error")

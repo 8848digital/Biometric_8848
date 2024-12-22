@@ -1,15 +1,15 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Attendance-Biometric-Error-Log-{####}",
- "creation": "2024-12-20 12:20:40.095353",
+ "autoname": "format:Biometric-Error-Log-{####}",
+ "creation": "2024-12-21 23:37:52.791319",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "title",
-  "column_break_icly",
+  "column_break_qg3n",
   "time_stamp",
-  "section_break_yyh6",
+  "section_break_jnyr",
   "details"
  ],
  "fields": [
@@ -19,30 +19,30 @@
    "label": "Title"
   },
   {
+   "fieldname": "column_break_qg3n",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "time_stamp",
    "fieldtype": "Datetime",
-   "label": "Time Stamp"
+   "label": "Time stamp"
+  },
+  {
+   "fieldname": "section_break_jnyr",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "details",
    "fieldtype": "Small Text",
    "label": "Details"
-  },
-  {
-   "fieldname": "column_break_icly",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_yyh6",
-   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-21 23:27:36.451562",
+ "modified": "2024-12-21 23:40:42.787945",
  "modified_by": "Administrator",
  "module": "Biometric",
- "name": "Attendance Biometric Error Log",
+ "name": "Biometric Error Log",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

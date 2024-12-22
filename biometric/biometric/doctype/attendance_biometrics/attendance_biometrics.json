@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HR-ATR-{#####}",
+ "creation": "2024-12-21 22:42:25.788270",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employeecode",
+  "column_break_xk67",
+  "devicecode",
+  "section_break_v1ff",
+  "logdate",
+  "column_break_lrre",
+  "logtime",
+  "section_break_qy2b",
+  "logdatetime",
+  "column_break_8b18",
+  "downloaddatetime",
+  "section_break_kqbi",
+  "direction"
+ ],
+ "fields": [
+  {
+   "fieldname": "employeecode",
+   "fieldtype": "Data",
+   "label": "EmployeeCode"
+  },
+  {
+   "fieldname": "devicecode",
+   "fieldtype": "Data",
+   "label": "DeviceCode"
+  },
+  {
+   "fieldname": "section_break_v1ff",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_qy2b",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "logdatetime",
+   "fieldtype": "Datetime",
+   "label": "LogDateTime"
+  },
+  {
+   "fieldname": "logdate",
+   "fieldtype": "Date",
+   "label": "LogDate"
+  },
+  {
+   "fieldname": "logtime",
+   "fieldtype": "Time",
+   "label": "LogTime"
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Data",
+   "label": "Direction"
+  },
+  {
+   "fieldname": "downloaddatetime",
+   "fieldtype": "Datetime",
+   "label": "DownloadDateTime"
+  },
+  {
+   "fieldname": "section_break_kqbi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xk67",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lrre",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8b18",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-21 22:53:38.509854",
+ "modified_by": "Administrator",
+ "module": "Biometric",
+ "name": "Attendance Biometrics",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
