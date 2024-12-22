@@ -41,17 +41,17 @@
   },
   {
    "fieldname": "logdatetime",
-   "fieldtype": "Data",
+   "fieldtype": "Datetime",
    "label": "LogDateTime"
   },
   {
    "fieldname": "logdate",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "LogDate"
   },
   {
    "fieldname": "logtime",
-   "fieldtype": "Data",
+   "fieldtype": "Time",
    "label": "LogTime"
   },
   {
@@ -61,7 +61,7 @@
   },
   {
    "fieldname": "downloaddatetime",
-   "fieldtype": "Data",
+   "fieldtype": "Datetime",
    "label": "DownloadDateTime"
   },
   {
@@ -83,7 +83,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-22 14:32:52.264563",
+ "modified": "2024-12-22 14:39:30.957827",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Attendance Biometrics",
