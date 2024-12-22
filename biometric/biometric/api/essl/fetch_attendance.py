@@ -183,7 +183,7 @@ def get_attendance_logs(from_date=None, to_date=None):
                         emp_id = frappe.db.get_value('Employee', {'attendance_device_id': employee_id}, 'employee')
                         if emp_id:
                             employee_checkin = frappe.get_doc({
-                                'doctype': 'Attendance Biometric',
+                                'doctype': 'Attendance Biometrics',
                                 'employeeid': emp_id,
                                 'intime': employee_time
                             })

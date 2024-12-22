@@ -24,7 +24,7 @@
   },
   {
    "fieldname": "time_stamp",
-   "fieldtype": "Data",
+   "fieldtype": "Datetime",
    "label": "Time stamp"
   },
   {
@@ -39,7 +39,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-22 13:43:23.284665",
+ "modified": "2024-12-22 14:58:14.057028",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Biometric Error Log",
