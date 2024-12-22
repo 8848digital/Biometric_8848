@@ -3,7 +3,7 @@ from frappe.model.document import Document
 from frappe.utils import now_datetime
 from datetime import datetime
 
-class AttendanceBiometric(Document):
+class AttendanceBiometrics(Document):
     def after_insert(self):
         settings = frappe.get_single("Biometric Settings")
         
