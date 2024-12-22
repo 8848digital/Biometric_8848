@@ -159,7 +159,7 @@
   },
   {
    "fieldname": "intime",
-   "fieldtype": "Datetime",
+   "fieldtype": "Data",
    "label": "InTime"
   },
   {
@@ -169,7 +169,7 @@
   },
   {
    "fieldname": "outtime",
-   "fieldtype": "Datetime",
+   "fieldtype": "Data",
    "label": "OutTime"
   },
   {
@@ -508,7 +508,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-21 23:48:06.245890",
+ "modified": "2024-12-22 12:54:11.114544",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Attendance Biometric",

@@ -264,3 +264,6 @@ app_license = "mit"
 #         "*/10 * * * *": ["biometric.biometric.doctype.attendance_biometric.attendance_biometric.validate"]
 #     }
 # }
+
+# apps/biometric/biometric/biometric/api/essl/fetch_attendance.py
+# biometric.biometric.api.essl.fetch_attendance.get_attendance_logs
