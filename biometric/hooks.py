@@ -267,3 +267,12 @@ app_license = "mit"
 
 # apps/biometric/biometric/biometric/api/essl/fetch_attendance.py
 # biometric.biometric.api.essl.fetch_attendance.get_attendance_logs
+
+scheduler_events = {
+    "cron": {
+        "*/10 * * * *": [
+            "biometric.biometric.api.essl.fetch_attendance.get_attendance_logs"
+        ]
+    }
+}
+

@@ -9,6 +9,9 @@
   "employee_checkin",
   "attendance",
   "attendance_request",
+  "column_break_lvfv",
+  "attendance_biometric_error_log",
+  "section_break_yfe5",
   "from_date",
   "to_date"
  ],
@@ -40,12 +43,26 @@
    "fieldname": "to_date",
    "fieldtype": "Date",
    "label": "To Date"
+  },
+  {
+   "fieldname": "column_break_lvfv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "attendance_biometric_error_log",
+   "fieldtype": "Check",
+   "label": "Attendance Biometric Error Log"
+  },
+  {
+   "fieldname": "section_break_yfe5",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-12-20 12:09:34.735981",
+ "modified": "2024-12-23 12:52:13.198086",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Biometric Settings",
