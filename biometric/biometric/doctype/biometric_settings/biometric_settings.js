@@ -14,6 +14,8 @@ frappe.ui.form.on("Biometric Settings", {
                 callback: function(r) {
                     if (!r.exc) {
                         frappe.msgprint(__('Attendance logs fetched successfully.'));
+                    } else {
+                        frappe.msgprint(__('Failed to fetch attendance logs.'));
                     }
                 }
             });
