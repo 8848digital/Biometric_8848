@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:HR-ATR-{#####}",
+ "autoname": "format:HR-ATB-{#####}",
  "creation": "2024-12-21 22:42:25.788270",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -83,7 +83,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-22 14:39:30.957827",
+ "modified": "2024-12-24 15:13:58.828468",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Attendance Biometrics",
