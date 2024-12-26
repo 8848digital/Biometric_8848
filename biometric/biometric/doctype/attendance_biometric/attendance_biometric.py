@@ -56,7 +56,8 @@ class AttendanceBiometric(Document):
                                 "employee": employee_name,
                                 "time": self.logdatetime,
                                 "log_type": log_type,
-                                "attendance_biometric": self.name
+                                "attendance_biometric": self.name,
+                                "device_id":self.devicecode
                             }).insert(ignore_permissions=True)
 
                 # Check for duplicate Attendance
