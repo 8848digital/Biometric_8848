@@ -96,48 +96,67 @@ class AttendanceBiometric(Document):
                                 "attendance_biometric": self.name,
                                 "custom_time": self.logdatetime,
                                 "custom_log_type": log_type
+                            
                             }).insert(ignore_permissions=True)
 
-                # Check for duplicate Attendance Request
-                attendance_request_exists = frappe.db.exists(
+                existing_attendance_request = frappe.get_all(
                     "Attendance Request",
-                    {
+                    filters={
                         "employee": employee_name,
-                        "from_date": logdatetime,
-                        "to_date": logdatetime,
-                        "custom_time": self.logdatetime,
-                        "custom_log_type": log_type
-                    }
+                        "from_date": ["<=", logdatetime.date()],
+                        "to_date": [">=", logdatetime.date()],
+                        "company": "8848 Digital LLP",
+                    },
+                    fields=["name", "start_time", "end_time"]
                 )
 
-                if not attendance_request_exists:
-                    last_request = frappe.get_all(
-                        "Attendance Request",
-                        filters={
-                            "employee": employee_name,
-                            "custom_time": ["<", self.logdatetime]
-                              
-                        },
-                        fields=["custom_log_type"],
-                        order_by="custom_time desc",
-                        limit=1
-                    )
+                # Initialize start_time and end_time based on AM/PM
+                start_time = None
+                end_time = None
 
-                    if not last_request or last_request[0]["custom_log_type"] != log_type:
-                        if settings.attendance_request:
-                            frappe.get_doc({
-                                "doctype": "Attendance Request",
-                                "employee": employee_name,
-                                "from_date": logdatetime.date(),
-                                "to_date": logdatetime.date(),
-                                "reason": "On Duty",
-                                "status": "Present",
-                                "attendance_biometric": self.name,
-                                "custom_time": self.logdatetime,
-                                "custom_log_type": log_type
-                            }).insert(ignore_permissions=True)
+                if logdatetime.hour < 12:  # AM
+                    start_time = logdatetime.time()
+                else:  # PM
+                    end_time = logdatetime.time()
 
-            # Log success if error logging is enabled
+                if existing_attendance_request:
+                    # Update the existing Attendance Request
+                    attendance_request = existing_attendance_request[0]  # Assuming only one request per day
+                    doc = frappe.get_doc("Attendance Request", attendance_request["name"])
+                    
+                    # Update start_time if it's AM and not already set
+                    if start_time and not doc.start_time:
+                        doc.start_time = start_time
+                    
+                    # Update end_time if it's PM
+                    if end_time:
+                        doc.end_time = end_time
+                    
+                    # Update other fields if necessary
+                    doc.custom_time = self.logdatetime
+                    doc.custom_log_type = log_type
+                    doc.reason = "On Duty"
+                    doc.attendance_biometric = self.name
+                    doc.created_by_attendance_biometric = 1
+                    
+                    doc.save(ignore_permissions=True)
+                else:
+                    # Create a new Attendance Request if none exists
+                    frappe.get_doc({
+                        "doctype": "Attendance Request",
+                        "employee": employee_name,
+                        "from_date": logdatetime.date(),
+                        "to_date": logdatetime.date(),
+                        "company": "8848 Digital LLP",
+                        "start_time": start_time,
+                        "end_time": end_time,
+                        "custom_time": self.logdatetime,
+                        "custom_log_type": log_type,
+                        "reason": "On Duty",
+                        "attendance_biometric": self.name,
+                        "created_by_attendance_biometric": 1
+                    }).insert(ignore_permissions=True)
+
             if settings.attendance_biometric_error_log:
                 frappe.get_doc({
                     "doctype": "Attendance Biometric Error Log",
@@ -147,7 +166,6 @@ class AttendanceBiometric(Document):
                 }).insert(ignore_permissions=True)
 
         except Exception as e:
-            # Log error if error logging is enabled
             if settings.attendance_biometric_error_log:
                 frappe.get_doc({
                     "doctype": "Attendance Biometric Error Log",
@@ -158,5 +176,4 @@ class AttendanceBiometric(Document):
             frappe.log_error(message=str(e), title="Attendance Biometric Error")
 
         finally:
-            # Commit changes to the database
             frappe.db.commit()

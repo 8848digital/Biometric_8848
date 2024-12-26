@@ -137,6 +137,13 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
+doc_events = {
+	"Attendance Request": {
+		"before_save": "biometric.biometric.customization.doc_events.before_save"
+
+	}
+}
+
 # doc_events = {
 # 	"*": {
 # 		"on_update": "method",
@@ -275,4 +282,5 @@ scheduler_events = {
         ]
     }
 }
+
 
