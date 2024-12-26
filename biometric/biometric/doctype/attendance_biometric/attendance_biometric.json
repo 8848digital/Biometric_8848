@@ -1,517 +1,93 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-12-13 17:36:53.879683",
+ "autoname": "format:HR-ATB-{#####}",
+ "creation": "2024-12-21 22:42:25.788270",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "employee_name",
-  "section_break_a2jn",
-  "attendancelogid",
-  "column_break_cid6",
-  "employeeid",
-  "section_break_yej8",
-  "column_break_c83u",
-  "indeviceid",
-  "column_break_fdz9",
-  "outdeviceid",
-  "section_break_09jj",
-  "attendancedate",
-  "column_break_tytu",
-  "duration",
-  "section_break_pxdm",
-  "intime",
-  "column_break_jgz7",
-  "outtime",
-  "section_break_no0o",
-  "column_break_fdxe",
-  "earlyby",
-  "column_break_bqsh",
-  "lateby",
-  "section_break_p5wq",
-  "leavetype",
-  "column_break_kfmz",
-  "isonleave",
-  "section_break_ntsh",
-  "leaveduration",
-  "column_break_zpu6",
-  "leaveremarks",
-  "section_break_mkpd",
-  "weeklyoff",
-  "column_break_yo44",
-  "holiday",
-  "section_break_uwjk",
-  "shiftid",
-  "column_break_mjbi",
-  "punchrecords",
-  "section_break_zbr5",
-  "present",
-  "column_break_762t",
-  "absent",
-  "section_break_i17f",
-  "status",
-  "column_break_g54x",
-  "statuscode",
-  "column_break_yuku",
-  "p1status",
-  "column_break_r6yx",
-  "p2status",
-  "column_break_cu95",
-  "p3status",
-  "section_break_hmkc",
-  "isonspecialoff",
-  "column_break_iema",
-  "specialofftype",
-  "section_break_7mhf",
-  "specialoffremark",
-  "section_break_ns6j",
-  "specialoffduration",
-  "column_break_t5uu",
-  "overtime",
-  "column_break_szgm",
-  "overtimee",
-  "section_break_ltcu",
-  "missedinpunch",
-  "column_break_yguu",
-  "missedoutpunch",
-  "section_break_ixri",
-  "c1",
-  "column_break_bwtw",
-  "c2",
-  "section_break_b8kb",
-  "c3",
-  "section_break_ctdq",
-  "c4",
-  "column_break_kkj0",
-  "c5",
-  "column_break_axfl",
-  "c6",
-  "section_break_elpy",
-  "c7",
-  "section_break_llmm",
-  "leavetypeid",
-  "column_break_8jxt",
-  "lossofhours",
-  "column_break_cbio",
-  "remarks",
-  "employee"
+  "employeecode",
+  "column_break_xk67",
+  "devicecode",
+  "section_break_v1ff",
+  "logdate",
+  "column_break_lrre",
+  "logtime",
+  "section_break_qy2b",
+  "logdatetime",
+  "column_break_8b18",
+  "downloaddatetime",
+  "section_break_kqbi",
+  "direction"
  ],
  "fields": [
   {
-   "fieldname": "status",
+   "fieldname": "employeecode",
    "fieldtype": "Data",
-   "label": "Status"
+   "label": "EmployeeCode"
   },
   {
-   "fieldname": "remarks",
+   "fieldname": "devicecode",
    "fieldtype": "Data",
-   "label": "Remarks"
+   "label": "DeviceCode"
   },
   {
-   "fieldname": "c1",
-   "fieldtype": "Data",
-   "label": "C1"
-  },
-  {
-   "fieldname": "c2",
-   "fieldtype": "Data",
-   "label": "C2"
-  },
-  {
-   "fieldname": "c3",
-   "fieldtype": "Data",
-   "label": "C3"
-  },
-  {
-   "fieldname": "c4",
-   "fieldtype": "Data",
-   "label": "C4"
-  },
-  {
-   "fieldname": "c5",
-   "fieldtype": "Data",
-   "label": "C5"
-  },
-  {
-   "fieldname": "c6",
-   "fieldtype": "Data",
-   "label": "C6"
-  },
-  {
-   "fieldname": "c7",
-   "fieldtype": "Data",
-   "label": "C7"
-  },
-  {
-   "fieldname": "attendancelogid",
-   "fieldtype": "Data",
-   "label": "AttendanceLogId"
-  },
-  {
-   "fieldname": "attendancedate",
-   "fieldtype": "Data",
-   "label": "AttendanceDate"
-  },
-  {
-   "fieldname": "employeeid",
-   "fieldtype": "Data",
-   "label": "EmployeeId"
-  },
-  {
-   "fieldname": "intime",
-   "fieldtype": "Data",
-   "label": "InTime"
-  },
-  {
-   "fieldname": "indeviceid",
-   "fieldtype": "Data",
-   "label": "InDeviceId"
-  },
-  {
-   "fieldname": "outtime",
-   "fieldtype": "Data",
-   "label": "OutTime"
-  },
-  {
-   "fieldname": "outdeviceid",
-   "fieldtype": "Data",
-   "label": "OutDeviceId"
-  },
-  {
-   "fieldname": "duration",
-   "fieldtype": "Data",
-   "label": "Duration"
-  },
-  {
-   "fieldname": "lateby",
-   "fieldtype": "Data",
-   "label": "LateBy"
-  },
-  {
-   "fieldname": "earlyby",
-   "fieldtype": "Data",
-   "label": "EarlyBy"
-  },
-  {
-   "fieldname": "isonleave",
-   "fieldtype": "Data",
-   "label": "IsOnLeave"
-  },
-  {
-   "fieldname": "leavetype",
-   "fieldtype": "Data",
-   "label": "LeaveType"
-  },
-  {
-   "fieldname": "leaveduration",
-   "fieldtype": "Data",
-   "label": "LeaveDuration"
-  },
-  {
-   "fieldname": "weeklyoff",
-   "fieldtype": "Data",
-   "label": "WeeklyOff"
-  },
-  {
-   "fieldname": "holiday",
-   "fieldtype": "Data",
-   "label": "Holiday"
-  },
-  {
-   "fieldname": "leaveremarks",
-   "fieldtype": "Data",
-   "label": "LeaveRemarks"
-  },
-  {
-   "fieldname": "shiftid",
-   "fieldtype": "Data",
-   "label": "ShiftId"
-  },
-  {
-   "fieldname": "present",
-   "fieldtype": "Data",
-   "label": "Present"
-  },
-  {
-   "fieldname": "absent",
-   "fieldtype": "Data",
-   "label": "Absent"
-  },
-  {
-   "fieldname": "statuscode",
-   "fieldtype": "Data",
-   "label": "StatusCode"
-  },
-  {
-   "fieldname": "p1status",
-   "fieldtype": "Data",
-   "label": "P1Status"
-  },
-  {
-   "fieldname": "p2status",
-   "fieldtype": "Data",
-   "label": "P2Status"
-  },
-  {
-   "fieldname": "p3status",
-   "fieldtype": "Data",
-   "label": "P3Status"
-  },
-  {
-   "fieldname": "isonspecialoff",
-   "fieldtype": "Data",
-   "label": "IsonSpecialOff"
-  },
-  {
-   "fieldname": "specialofftype",
-   "fieldtype": "Data",
-   "label": "SpecialOffType"
-  },
-  {
-   "fieldname": "specialoffremark",
-   "fieldtype": "Data",
-   "label": "SpecialOffRemark"
-  },
-  {
-   "fieldname": "specialoffduration",
-   "fieldtype": "Data",
-   "label": "SpecialOffDuration"
-  },
-  {
-   "fieldname": "overtime",
-   "fieldtype": "Data",
-   "label": "OverTime"
-  },
-  {
-   "fieldname": "overtimee",
-   "fieldtype": "Data",
-   "label": "OverTimeE"
-  },
-  {
-   "fieldname": "missedoutpunch",
-   "fieldtype": "Data",
-   "label": "MissedOutPunch"
-  },
-  {
-   "fieldname": "missedinpunch",
-   "fieldtype": "Data",
-   "label": "MissedInPunch"
-  },
-  {
-   "fieldname": "leavetypeid",
-   "fieldtype": "Data",
-   "label": "LeaveTypeId"
-  },
-  {
-   "fieldname": "lossofhours",
-   "fieldtype": "Data",
-   "label": "LossOfHours"
-  },
-  {
-   "fieldname": "punchrecords",
-   "fieldtype": "Data",
-   "label": "PunchRecords"
-  },
-  {
-   "fieldname": "column_break_cid6",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_09jj",
+   "fieldname": "section_break_v1ff",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "column_break_c83u",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_jgz7",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_no0o",
+   "fieldname": "section_break_qy2b",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "column_break_fdxe",
-   "fieldtype": "Column Break"
+   "fieldname": "logdatetime",
+   "fieldtype": "Datetime",
+   "label": "LogDateTime"
   },
   {
-   "fieldname": "column_break_bqsh",
-   "fieldtype": "Column Break"
+   "fieldname": "logdate",
+   "fieldtype": "Date",
+   "label": "LogDate"
   },
   {
-   "fieldname": "section_break_p5wq",
-   "fieldtype": "Section Break"
+   "fieldname": "logtime",
+   "fieldtype": "Time",
+   "label": "LogTime"
   },
   {
-   "fieldname": "column_break_kfmz",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_ntsh",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_yo44",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_uwjk",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_mjbi",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_762t",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_i17f",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_g54x",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_yuku",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_r6yx",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_cu95",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_hmkc",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_iema",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_ns6j",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_t5uu",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_szgm",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_ltcu",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_yguu",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_axfl",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_ixri",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_bwtw",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_ctdq",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_kkj0",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_elpy",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_cbio",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_8jxt",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_fdz9",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_yej8",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_pxdm",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_tytu",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_zpu6",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_mkpd",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_b8kb",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_zbr5",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_7mhf",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_llmm",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fetch_from": "employee.attendance_device_id",
-   "fieldname": "employee_name",
+   "fieldname": "direction",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Employee Name"
+   "label": "Direction"
   },
   {
-   "fieldname": "section_break_a2jn",
+   "fieldname": "downloaddatetime",
+   "fieldtype": "Datetime",
+   "label": "DownloadDateTime"
+  },
+  {
+   "fieldname": "section_break_kqbi",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "employee",
-   "fieldtype": "Link",
-   "label": "Employee",
-   "options": "Employee"
+   "fieldname": "column_break_xk67",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lrre",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8b18",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-22 12:54:11.114544",
+ "modified": "2024-12-24 15:13:58.828468",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Attendance Biometric",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
