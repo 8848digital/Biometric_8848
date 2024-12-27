@@ -137,7 +137,7 @@ class AttendanceBiometric(Document):
                     doc.custom_log_type = log_type
                     doc.reason = "On Duty"
                     doc.attendance_biometric = self.name
-                    doc.created_by_attendance_biometric = 1
+                    doc.custom_created_by_attendance_biometric = 1
                     
                     doc.save(ignore_permissions=True)
                 else:
@@ -154,7 +154,7 @@ class AttendanceBiometric(Document):
                         "custom_log_type": log_type,
                         "reason": "On Duty",
                         "attendance_biometric": self.name,
-                        "created_by_attendance_biometric": 1
+                        "custom_created_by_attendance_biometric": 1
                     }).insert(ignore_permissions=True)
 
             if settings.attendance_biometric_error_log:

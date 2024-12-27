@@ -283,4 +283,8 @@ scheduler_events = {
     }
 }
 
+fixtures = [
+    {"dt": "Custom Field", "filters": [["module", "in", ["Biometric"]]]},
+    
+]
 
