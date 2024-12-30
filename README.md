@@ -78,3 +78,4 @@ BEGIN
         RAISERROR ('Trigger Error: %s', 16, 1, @errorMessage) WITH LOG;
     END CATCH
 END;
+'''
