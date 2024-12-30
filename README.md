@@ -19,7 +19,7 @@
   <ul>
     <li><strong>Trigger-Based Data Fetching</strong>: Captures new attendance records from the <em>MasterAttendance</em> table and calls a Python script for data processing.</li>
     <li><strong>Manual Data Fetching</strong>: Includes a button in ERPNext to fetch attendance data for a specified date range.</li>
-    <li><strong>Configurable Settings</strong>: Allows toggling data sync for:
+    <li><strong>Biometric Settings</strong>: Allows toggling data sync for:
       <ul>
         <li>Employee Checkin</li>
         <li>Attendance</li>
