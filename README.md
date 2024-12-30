@@ -78,4 +78,29 @@ BEGIN
         RAISERROR ('Trigger Error: %s', 16, 1, @errorMessage) WITH LOG;
     END CATCH
 END;
-'''
+
+
+
+DROP TRIGGER trg_AfterInsert;
+
+SET IDENTITY_INSERT MasterAttendance ON;
+
+
+INSERT INTO MasterAttendance (
+    EmployeeCode,
+    DeviceCode,
+    LogDateTime,
+    LogDate,
+    LogTime,
+    Direction,
+    DownloadDateTime
+)
+VALUES (
+    'HR-EMP-00081',
+    '81',
+    '2024-12-26 19:29:08.000',
+    '2024-12-26',
+    '10:29:08.0000000',
+    'in',
+    '2024-12-26 19:29:08.000'
+);
