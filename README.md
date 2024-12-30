@@ -42,14 +42,3 @@ This project integrates biometric data from **Essl Software** into **ERPNext**. 
    - Attendance Request  
 3. Use the "Manual Fetch Attendance" button to fetch attendance data for a specific date range.
 
----
-
-### Example
-
-```json
-{
-  "employee_id": "EMP001",
-  "checkin_time": "2024-12-30T09:00:00",
-  "checkout_time": "2024-12-30T18:00:00",
-  "status": "Present"
-}
