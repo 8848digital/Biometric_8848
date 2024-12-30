@@ -5,11 +5,6 @@
 
 ---
 
-### License
-
-MIT
-
----
 
 ## Overview
 
