@@ -9,8 +9,7 @@
   "title",
   "column_break_icly",
   "time_stamp",
-  "section_break_yyh6",
-  "details"
+  "section_break_yyh6"
  ],
  "fields": [
   {
@@ -24,11 +23,6 @@
    "label": "Time Stamp"
   },
   {
-   "fieldname": "details",
-   "fieldtype": "Small Text",
-   "label": "Details"
-  },
-  {
    "fieldname": "column_break_icly",
    "fieldtype": "Column Break"
   },
@@ -39,7 +33,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-22 14:57:29.660092",
+ "modified": "2024-12-31 14:57:04.531326",
  "modified_by": "Administrator",
  "module": "Biometric",
  "name": "Attendance Biometric Error Log",
