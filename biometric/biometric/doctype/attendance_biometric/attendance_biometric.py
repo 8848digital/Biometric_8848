@@ -158,22 +158,22 @@ class AttendanceBiometric(Document):
                         "custom_created_by_attendance_biometric": 1
                     }).insert(ignore_permissions=True)
 
-            if settings.attendance_biometric_error_log:
-                frappe.get_doc({
-                    "doctype": "Attendance Biometric Error Log",
-                    "title": "Success in AttendanceBiometric",
-                    "time_stamp": now_datetime(),
-                    "details": "AttendanceBiometric processed successfully"
-                }).insert(ignore_permissions=True)
+            # if settings.attendance_biometric_error_log:
+            #     frappe.get_doc({
+            #         "doctype": "Attendance Biometric Error Log",
+            #         "title": "Success in AttendanceBiometric",
+            #         "time_stamp": now_datetime(),
+            #         "details": "AttendanceBiometric processed successfully"
+            #     }).insert(ignore_permissions=True)
 
         except Exception as e:
-            if settings.attendance_biometric_error_log:
-                frappe.get_doc({
-                    "doctype": "Attendance Biometric Error Log",
-                    "title": "Error in AttendanceBiometric",
-                    "time_stamp": now_datetime(),
-                    "details": str(e)
-                }).insert(ignore_permissions=True)
+            # if settings.attendance_biometric_error_log:
+            #     frappe.get_doc({
+            #         "doctype": "Attendance Biometric Error Log",
+            #         "title": "Error in AttendanceBiometric",
+            #         "time_stamp": now_datetime(),
+            #         "details": str(e)
+            #     }).insert(ignore_permissions=True)
             frappe.log_error(message=str(e), title="Attendance Biometric Error")
 
         finally:
