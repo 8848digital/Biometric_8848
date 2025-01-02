@@ -1,0 +1,27 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-12-31 17:31:15.003284",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-12-31 17:31:23.332891",
+ "modified_by": "Administrator",
+ "module": "Biometric",
+ "name": "Attendance Biometric Error Log",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Attendance Biometric Error Log",
+ "report_name": "Attendance Biometric Error Log",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}
