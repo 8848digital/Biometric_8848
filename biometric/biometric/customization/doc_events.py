@@ -1,3 +1,5 @@
+# import frappe
+
 import frappe
 def before_save(doc ,method = None):
     update_start_and_end_time(doc)
