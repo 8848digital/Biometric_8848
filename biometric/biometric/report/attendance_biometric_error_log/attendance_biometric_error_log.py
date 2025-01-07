@@ -14,7 +14,7 @@ def get_columns():
         {"fieldname": "log_date_time", "label": _("Log Date Time"), "fieldtype": "Datetime", "width": 150},
         {"fieldname": "log_date", "label": _("Log Date"), "fieldtype": "Date", "width": 100},
         {"fieldname": "log_time", "label": _("Log Time"), "fieldtype": "Time", "width": 100},
-        {"fieldname": "employee_code", "label": _("Employee Code"), "fieldtype": "Data", "width": 150},
+        # {"fieldname": "employee_code", "label": _("Employee Code"), "fieldtype": "Data", "width": 150},
         {"fieldname": "device_code", "label": _("Device Code"), "fieldtype": "Data", "width": 100},
         {"fieldname": "direction", "label": _("Direction"), "fieldtype": "Data", "width": 100},
         {"fieldname": "download_date_time", "label": _("Download Date Time"), "fieldtype": "Datetime", "width": 150},
@@ -116,6 +116,7 @@ from frappe.model.document import Document
 
 from datetime import datetime
 
+# Create
 @frappe.whitelist(allow_guest=True)
 def create_attendance_request(**kwargs):
     print("kwargs", kwargs)

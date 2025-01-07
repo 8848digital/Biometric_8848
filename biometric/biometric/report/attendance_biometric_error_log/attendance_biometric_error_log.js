@@ -1,3 +1,4 @@
+// Frappe
 frappe.query_reports["Attendance Biometric Error Log"] = {
     "filters": [
         {
@@ -33,21 +34,21 @@ frappe.query_reports["Attendance Biometric Error Log"] = {
             value = `<a class="btn-create-attend-req" 
                         style="margin-left:5px; border:none; color: #fff; background-color: #5E64FF; 
                         padding: 3px 5px; border-radius: 5px;" 
-                        onclick="createAttendanceRequest('${data.employee_code}', '${data.log_date_time}','${data.log_date_time}','${data.direction}','${data.log_time}')">
+                        onclick="createAttendanceRequest('${data.employee_name}', '${data.log_date_time}','${data.log_date_time}','${data.direction}','${data.log_time}')">
                         Create Attendance Request</a>`;
         }
         return value;
     }
 };
 
-function createAttendanceRequest(employee_code, from_date, to_date, direction, log_time,log_date_time) {
+function createAttendanceRequest(employee_name, from_date, to_date, direction, log_time,log_date_time) {
     let logHour = new Date(log_time).getHours();
     let custom_log_type = (logHour < 12) ? "IN" : "OUT"; // Set IN for AM and OUT for PM
 
     frappe.call({
         method: "biometric.biometric.report.attendance_biometric_error_log.attendance_biometric_error_log.create_attendance_request",  // Replace with your actual path to the backend method
         args: {
-            employee: employee_code,
+            employee: employee_name,
             from_date: from_date,
             to_date: to_date,
             company: "8848 Digital LLP",
