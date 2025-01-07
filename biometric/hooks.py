@@ -140,7 +140,6 @@ app_license = "mit"
 doc_events = {
 	"Attendance Request": {
 		"before_save": "biometric.biometric.customization.doc_events.before_save"
-
 	}
 }
 
