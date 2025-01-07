@@ -1,3 +1,4 @@
+// Frappe
 frappe.query_reports["Attendance Biometric Error Log"] = {
     "filters": [
         {

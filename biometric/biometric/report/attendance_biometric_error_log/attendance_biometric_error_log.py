@@ -116,6 +116,7 @@ from frappe.model.document import Document
 
 from datetime import datetime
 
+# Create
 @frappe.whitelist(allow_guest=True)
 def create_attendance_request(**kwargs):
     print("kwargs", kwargs)
