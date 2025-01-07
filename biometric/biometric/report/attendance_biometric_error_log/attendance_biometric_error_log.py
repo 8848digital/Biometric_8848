@@ -19,6 +19,7 @@ def get_columns():
         {"fieldname": "direction", "label": _("Direction"), "fieldtype": "Data", "width": 100},
         {"fieldname": "download_date_time", "label": _("Download Date Time"), "fieldtype": "Datetime", "width": 150},
         {"fieldname": "title", "label": _("Title"), "fieldtype": "Data", "width": 200},
+        {"fieldname": "create_attend_req", "label": _("Attendance Request"), "fieldtype": "Data", "width": 200},
     ]
 
 def get_data(filters):
@@ -107,3 +108,41 @@ def get_data(filters):
             data.append(master_data)
 
     return data
+
+from datetime import datetime
+
+import frappe
+from frappe.model.document import Document
+
+from datetime import datetime
+
+@frappe.whitelist(allow_guest=True)
+def create_attendance_request(**kwargs):
+    print("kwargs", kwargs)
+    
+    employee = kwargs.get("employee")
+    from_date = kwargs.get("from_date")
+    to_date = kwargs.get("to_date")
+    custom_time = kwargs.get("custom_time")  
+    start_time = kwargs.get("start_time") 
+    end_time = kwargs.get("end_time") 
+    custom_log_type = kwargs.get("custom_log_type")
+    from_date_obj = datetime.strptime(from_date, "%Y-%m-%d %H:%M:%S")  # Assuming from_date is in "YYYY-MM-DD HH:MM:SS" format
+    
+    if from_date_obj.hour < 12:
+        custom_log_type = "IN"
+    else:
+        custom_log_type = "OUT"
+    attendance_request = frappe.new_doc('Attendance Request')
+    attendance_request.employee = employee
+    attendance_request.from_date = from_date
+    attendance_request.to_date = to_date
+    attendance_request.company = "8848 Digital LLP"
+    attendance_request.custom_time = custom_time
+    attendance_request.start_time = start_time
+    attendance_request.end_time = end_time
+
+    attendance_request.save()
+    frappe.db.commit()
+
+   

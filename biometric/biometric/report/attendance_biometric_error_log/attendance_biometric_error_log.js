@@ -25,28 +25,44 @@ frappe.query_reports["Attendance Biometric Error Log"] = {
             "options": ["", "IN", "OUT"],
         }
     ],
-
-    "onload": function(report) {
-        // Adding a custom button to the report
-        report.page.add_button(__("Create Attendance Request"), function() {
-            // Functionality when button is clicked
-            frappe.call({
-                method: "your_custom_app.path.to.create_attendance_request_method",
-                args: {
-                    // Pass required parameters (filters or selected data from report)
-                    "from_date": report.filters.from_date,
-                    "to_date": report.filters.to_date,
-                    "employee_name": report.filters.employee_first_name,
-                    "direction": report.filters.direction
-                },
-                callback: function(response) {
-                    if (response.message) {
-                        frappe.msgprint(__('Attendance Request created successfully.'));
-                    } else {
-                        frappe.msgprint(__('Failed to create Attendance Request.'));
-                    }
-                }
-            });
-        });
+    "formatter": function(value, row, column, data, default_formatter) {
+        value = default_formatter(value, row, column, data);
+        
+        if (column.id == "create_attend_req") {
+            // Create the button with a click event
+            value = `<a class="btn-create-attend-req" 
+                        style="margin-left:5px; border:none; color: #fff; background-color: #5E64FF; 
+                        padding: 3px 5px; border-radius: 5px;" 
+                        onclick="createAttendanceRequest('${data.employee_code}', '${data.log_date_time}','${data.log_date_time}','${data.direction}','${data.log_time}')">
+                        Create Attendance Request</a>`;
+        }
+        return value;
     }
 };
+
+function createAttendanceRequest(employee_code, from_date, to_date, direction, log_time,log_date_time) {
+    let logHour = new Date(log_time).getHours();
+    let custom_log_type = (logHour < 12) ? "IN" : "OUT"; // Set IN for AM and OUT for PM
+
+    frappe.call({
+        method: "biometric.biometric.report.attendance_biometric_error_log.attendance_biometric_error_log.create_attendance_request",  // Replace with your actual path to the backend method
+        args: {
+            employee: employee_code,
+            from_date: from_date,
+            to_date: to_date,
+            company: "8848 Digital LLP",
+            custom_time: log_date_time,
+            custom_log_type: custom_log_type,
+            start_time: log_time ,
+            end_time: log_time
+        },
+        callback: function(r) {
+            if (!r.exc) {
+                frappe.msgprint(__('Attendance Request Created Successfully'));
+                frappe.query_reports["Attendance Biometric Error Log"].get_data();
+            } else {
+                frappe.msgprint(__('Failed to create Attendance Request'));
+            }
+        }
+    });
+}
