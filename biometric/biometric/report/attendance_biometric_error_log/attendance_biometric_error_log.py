@@ -128,12 +128,31 @@ def create_attendance_request(**kwargs):
     start_time = kwargs.get("start_time") 
     end_time = kwargs.get("end_time") 
     custom_log_type = kwargs.get("custom_log_type")
+    
+    # Convert from_date to datetime object
     from_date_obj = datetime.strptime(from_date, "%Y-%m-%d %H:%M:%S")  # Assuming from_date is in "YYYY-MM-DD HH:MM:SS" format
     
     if from_date_obj.hour < 12:
         custom_log_type = "IN"
     else:
         custom_log_type = "OUT"
+    
+    # Check if an attendance request already exists for the same employee and date range
+    existing_request = frappe.get_all(
+        'Attendance Request',
+        filters={
+            'employee': employee,
+            'from_date': ['<=', to_date],
+            'to_date': ['>=', from_date]
+        },
+        limit_page_length=1
+    )
+
+    if existing_request:
+        frappe.throw(_("Attendance request already exists for this employee in the given date range."))
+        return
+
+    # Create a new attendance request if no duplicate exists
     attendance_request = frappe.new_doc('Attendance Request')
     attendance_request.employee = employee
     attendance_request.from_date = from_date
@@ -146,4 +165,4 @@ def create_attendance_request(**kwargs):
     attendance_request.save()
     frappe.db.commit()
 
-   
+    return attendance_request
